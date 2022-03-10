@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- css  -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="./css/fontawesome-free-6.0.0-web/css/all.min.css">
+
+    <title>Document</title>
+</head>
+<body>
+    <div id="main">
+        <div id="fstory">
+            <div class="story-item create">
+                <div class="create-img">
+                    <img src="./img/animal1.jpg" alt="" class="item-img">
+                    <button class="create-btn">+</button>
+                </div>
+                <p>Tạo tin</p>
+
+            </div>
+            <div class="story-item">
+                <img src="./img/animal2.jpg" alt="" class="item-img">
+                <div class="small-img-container">
+                    <img src="./img/animal3.jpg" alt="" class="small-img">
+                    <div class="active"> 
+                    </div>
+                </div>
+                <p class="item-name">Xuân Mai</p>
+            </div>
+            <div class="story-item">
+                <img src="./img/animal4.jpg" alt="" class="item-img">
+                <div class="small-img-container">
+                    <img src="./img/animal5.jpg" alt="" class="small-img">
+                    <div class="active"> 
+                    </div>
+                </div>
+                <p class="item-name">Trần Xuân Hoàng</p>
+            </div>
+            <div class="story-item">
+                <img src="./img/animal6.jpg" alt="" class="item-img">
+                <div class="small-img-container">
+                    <img src="./img/animal7.jpg" alt="" class="small-img">
+                    <div class="active"> 
+                    </div>
+                </div>
+                <p class="item-name">Quế Anh</p>
+            </div>
+            <div class="story-item">
+                <img src="./img/animal8.jpg" alt="" class="item-img">
+                <div class="small-img-container">
+                    <img src="./img/animal9.jpg" alt="" class="small-img">
+                    <div class="active"> 
+                    </div>
+                </div>
+                <p class="item-name">Xuân Mai</p>
+            </div>
+            <div class="story-item">
+                <img src="./img/animal8.jpg" alt="" class="item-img">
+                <div class="small-img-container">
+                    <img src="./img/animal9.jpg" alt="" class="small-img">
+                    <div class="active"> 
+                    </div>
+                </div>
+                <p class="item-name">Xuân Mai</p>
+            </div>
+            <div class="story-item">
+                <img src="./img/animal8.jpg" alt="" class="item-img">
+                <div class="small-img-container">
+                    <img src="./img/animal9.jpg" alt="" class="small-img">
+                    <div class="active"> 
+                    </div>
+                </div>
+                <p class="item-name">Xuân Mai</p>
+            </div>
+            <div class="story-item">
+                <img src="./img/animal8.jpg" alt="" class="item-img">
+                <div class="small-img-container">
+                    <img src="./img/animal9.jpg" alt="" class="small-img">
+                    <div class="active"> 
+                    </div>
+                </div>
+                <p class="item-name">Xuân Mai</p>
+            </div>
+            <div class="story-item">
+                <img src="./img/animal8.jpg" alt="" class="item-img">
+                <div class="small-img-container">
+                    <img src="./img/animal9.jpg" alt="" class="small-img">
+                    <div class="active"> 
+                    </div>
+                </div>
+                <p class="item-name">Xuân Mai</p>
+            </div>
+        </div>
+        <button id="next-btn"><i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+    
+    <script>
+        var buttonLeft = document.getElementById('next-btn');
+        var w = document.getElementById('fstory').clientWidth/5;
+        var p = w;
+        console.log(p);
+        buttonLeft.onclick = function () {
+            console.log("a");
+            document.getElementById('fstory').scroll({left: p, behavior:'smooth'});
+            p += w;
+        };
+    </script>
+</body>
+
+</html>

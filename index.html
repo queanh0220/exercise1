@@ -100,19 +100,58 @@
                 </div>
                 <p class="item-name">Xuân Mai</p>
             </div>
+            <div class="story-item">
+                <img src="./img/animal8.jpg" alt="" class="item-img">
+                <div class="small-img-container">
+                    <img src="./img/animal9.jpg" alt="" class="small-img">
+                    <div class="active"> 
+                    </div>
+                </div>
+                <p class="item-name">Xuân Mai</p>
+            </div>
         </div>
         <button id="next-btn"><i class="fa-solid fa-arrow-right"></i></button>
+        <button id="previous-btn"><i class="fa-solid fa-arrow-left"></i></button>
     </div>
     
     <script>
-        var buttonLeft = document.getElementById('next-btn');
-        var w = document.getElementById('fstory').clientWidth/5;
-        var p = w;
-        console.log(p);
-        buttonLeft.onclick = function () {
-            console.log("a");
-            document.getElementById('fstory').scroll({left: p, behavior:'smooth'});
+        var buttonRight = document.getElementById('next-btn');
+        var buttonLeft = document.getElementById('previous-btn');
+        var story = document.getElementById('fstory');
+        var wstory = story.clientWidth;
+        var w = document.getElementsByClassName('story-item')[0].offsetWidth + wstory/100;
+        var p = 0;
+        console.log(story.scrollWidth - wstory);
+        buttonRight.onclick = function () {
+            if(p >= (story.scrollWidth - wstory)) {
+                p = story.scrollWidth - wstory;
+                buttonRight.style.display = "none";
+                return;
+            }
             p += w;
+            buttonLeft.style.display = "block";
+            console.log("a");
+            story.scroll({left: p, behavior:'smooth'});
+            if(p >= (story.scrollWidth - wstory)) {
+                p = story.scrollWidth - wstory;
+                buttonRight.style.display = "none";
+            }
+        };
+
+        buttonLeft.onclick = function () {
+            if(p <= 0) {
+                p = 0;
+                buttonLeft.style.display = "none";
+                return;
+            }
+            p -= w;
+            buttonRight.style.display = "block";
+            console.log("a");
+            story.scroll({left: p, behavior:'smooth'});
+            if(p <= 0) {
+                p = 0;
+                buttonLeft.style.display = "none";
+            }
         };
     </script>
 </body>

@@ -119,7 +119,7 @@ img {
     font-weight: 400;
 }
 
-#next-btn {
+#next-btn, #previous-btn {
     width: 43px;
     height: 43px;
     border-radius: 50%;
@@ -128,18 +128,26 @@ img {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    right: -20px;
     font-size: 20px;
     font-weight: 300;
     -webkit-box-shadow: 0px 0px 5px -3px #000000; 
     box-shadow: 0px 0px 5px -3px #000000;
 }
 
-#next-btn:hover {
+#next-btn {
+    right: -20px;
+}
+
+#previous-btn {
+    left: -20px;
+    display: none;
+}
+
+#next-btn:hover, #previous-btn:hover {
     background-color: #f5f5f5;
 }
 
-#next-btn:active {
+#next-btn:active, #previous-btn:active {
     background-color: #dbdbdb;
     transform: scale(0.95) translateY(-50%);
 }
